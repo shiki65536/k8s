@@ -7,7 +7,7 @@ Cloudiod is a RESTful web service for real-time image object detection using Fla
 
 ## System Design
 - **Client**: `client.py` sends images with UUIDs.
-- **Service**: NodePort (`30008`) routes requests to Flask app (port `5050`).
+- **Service**: NodePort (default `30008`) routes requests to Flask app (default port `5050`).
 - **Pods**: Docker containers with 0.5 CPU, 512MiB memory.
 - **YOLOv3-tiny + OpenCV**: Detects objects in images.
 
@@ -44,7 +44,7 @@ cloudiod/
    ```bash
    mkdir inputfolder
    ```
-   Place valid JPEG images in `inputfolder/` (e.g., download sample images or use your own).
+   Place valid JPEG images in `inputfolder/`.
 
 3. **Download YOLOv3-tiny Configuration**:
    Create the `yolo_tiny_configs/` folder and download required files:
