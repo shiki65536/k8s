@@ -1,3 +1,5 @@
+![Cloudiod Architecture](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HSDDIi1tCf5IKfdqXVzSLQ.png)
+
 # Cloudiod: Image Object Detection Service
 
 ## Overview
