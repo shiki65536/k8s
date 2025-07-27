@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: k8s-app-container
-          image: magicmizuki/k8s-app:latest
+          image: cloudiod/k8s-app:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
