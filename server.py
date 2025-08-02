@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def home():
-    return "Use command: python client.py <inputfolder> <endpoint> <num_threads>"
+    return "Use command: python Cloudiod_client.py <inputfolder> <endpoint> <num_threads>"
 
 @app.route("/api/", methods=["GET"])
 def get():
@@ -27,7 +27,9 @@ def api():
     cfg = object_detection.get_config(cfgpath)
     weights = object_detection.get_weights(wpath)
 
-    #Handle JSON request, JSON -> dict
+    # data = request.get_json()
+
+    # #Handle JSON request, JSON -> dict
     json_str = request.get_json()
     data = json.loads(json_str)
 
@@ -35,7 +37,6 @@ def api():
     image_str = data["image"]
 
     #Clean temp file
-    del json_str
     del data
 
     #image setting
@@ -53,4 +54,4 @@ def api():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port='5050', threaded=True)
+    app.run(host='0.0.0.0', port=5050, threaded=True)

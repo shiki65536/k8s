@@ -5,9 +5,8 @@ metadata:
 spec:
   ports:
     - protocol: TCP
-      port: 5050
+      port: 80
       targetPort: 5050
-      nodePort: 30008
   type: NodePort
   selector:
     app: k8s-app

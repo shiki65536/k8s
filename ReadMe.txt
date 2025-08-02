@@ -59,7 +59,7 @@ cloudiod/
 
 4. **Build Docker Image**:
    ```bash
-   docker build -t cloudiod:latest .
+   docker build -t <docker user name>:latest .
    ```
 
 5. **Deploy to Kubernetes**:

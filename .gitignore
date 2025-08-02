@@ -1,0 +1,39 @@
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# IDE-specific files
+.idea/
+*.iml
+.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+vendor/
+
+# Logs and databases
+*.log
+*.sqlite3
+db/*.sqlite3
+
+# Environment variables
+.env
+.flaskenv
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+
+# Miscellaneous
+temp/
+tmp/
+
+# project
+inputfolder/
+yolo_tiny_configs/
