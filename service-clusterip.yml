@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service-clusterip
+spec:
+  type: ClusterIP # Ingress usually ClusterIP Service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5050
+  selector:
+    app: k8s-app
+# Future expansion example
+# spec:
+#   rules:
+#   - host: api.myapp.com
+#     http:
+#       paths:
+#       - path: /detection/(.*)     # Object detection
+#         backend:
+#           service:
+#             name: detection-service
+#       - path: /classification/(.*) # Image classification
+#         backend:
+#           service:
+#             name: classification-service
+#       - path: /tracking/(.*)      # Object tracking
+#         backend:
+#           service:
+#             name: tracking-service
